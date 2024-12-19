@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+
+    <!-- Link to the CSS stylesheets -->
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <!-- Link to JavaScript file -->
+    <script src=".js"></script>
+
+    <!-- Navbar - You can include it here using JavaScript or PHP -->
+    <nav>
+        <div class="nav-item">Home</div>
+        <div class="nav-item">Profile</div>
+        <div class="nav-item">Lounge</div>
+        <div class="nav-item">About</div>
+        <div class="nav-item">Settings</div>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+
+</body>
+</html>
