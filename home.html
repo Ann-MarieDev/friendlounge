@@ -7,6 +7,9 @@
     <title>Home</title>
 </head>
 <body>
+    <!-- Link to home.js at the top of the body -->
+    <script src="home.js"></script>
+
     <!--Nav bar-->
     <nav>
         <div class="nav-item">Home</div>
@@ -19,17 +22,66 @@
 
     <!--Columns-->
     <div class="flex-grid">
-        <!-- First Column (Status and Friends) -->
+        <!-- First Column (Status + Friends Section) -->
         <div class="col">
-            <div class="section">Status</div>
-            <div class="section second-section">Friends</div>
+            <!-- Status Section -->
+            <div class="section status-section">
+                <div class="status-header">
+                    <!-- "Status" label -->
+                    <h2>Status</h2>
+
+                    <!-- Status options -->
+                    <div class="status-options">
+                        <div class="status-option" id="online" onclick="changeStatus('Online')">Online</div>
+                        <div class="status-option" id="away" onclick="changeStatus('Away')">Away</div>
+                        <div class="status-option" id="dnd" onclick="changeStatus('Do Not Disturb')">Do Not Disturb</div>
+                        <div class="status-option" id="custom" onclick="showCustomStatusInput()">Custom</div>
+                    </div>
+                </div>
+
+                <!-- Custom Status Input Section -->
+                <div id="custom-status-input" class="custom-status" style="display: none;">
+                    <input type="text" id="custom-status" placeholder="Enter your custom status...">
+                    <button onclick="changeEmoji()">Change Emoji</button>
+                    <span id="emoji" class="emoji">🙂</span>
+                </div>
+
+                <!-- Display current status -->
+                <div id="current-status" class="current-status">Current Status: <span id="status-text">Offline</span></div>
+            </div>
+
+            <!-- Friends Section -->
+            <div class="section friends-section">
+                <h3>Friends</h3>
+                <!-- Example Friend List -->
+                <div class="friend-item">
+                    <img src="https://via.placeholder.com/40" alt="Friend" class="friend-img">
+                    <span class="friend-name">John Doe</span>
+                </div>
+                <div class="friend-item">
+                    <img src="https://via.placeholder.com/40" alt="Friend" class="friend-img">
+                    <span class="friend-name">Jane Smith</span>
+                </div>
+            </div>
         </div>
 
-        <!-- Second Column (My Spaces) -->
-        <div class="col">My Spaces</div>
+        <!-- Second Column (Empty or Other Content) -->
+        <div class="col">
+            <div class="section events-section">
+                <h3>Upcoming Events</h3>
+                <p>No events at the moment!</p>
+            </div>
+        </div>
 
-        <!-- Third Column (Events) -->
-        <div class="col">Events</div>
+        <!-- Third Column (Empty or Other Content) -->
+        <div class="col">
+            <div class="section events-section">
+                <h3>More Info</h3>
+                <p>Content coming soon...</p>
+            </div>
+        </div>
     </div>
+
+    <script src="home.js"></script>
 </body>
 </html>
