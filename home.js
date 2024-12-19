@@ -1,3 +1,5 @@
+//THIS IS ALL USED AS A PLACEHOLDER TO SIMULATE WEBSITE FUNCTIONALITY
+
 let currentStatus = 'Offline'; // Default status
 
 // Function to change status (sets custom or pre-defined statuses)
