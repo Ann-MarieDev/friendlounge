@@ -1,3 +1,10 @@
+/* Dark Mode - General Background and Text Colors */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color */
+    font-family: Arial, sans-serif;
+}
+
 /* Reset margins and padding to remove unwanted spacing */
 * {
     margin: 0;
@@ -12,40 +19,63 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Navbar Style (Inspired by the photo you provided) */
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the nav items */
     align-items: center;
-    background-color: #1f1f1f; /* Dark navbar */
-    padding: 10px;
-    width: 100%; 
-    position: absolute; 
+    background-color: #1f1f1f; /* Dark background */
+    padding: 15px 0; /* Vertical padding for space */
+    width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100; /* Ensure navbar stays on top */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
 }
 
+/* Styling for navbar items */
 .nav-item {
     background-color: #333;
-    padding: 10px 20px;
-    margin: 0 5px;
-    border-radius: 5px;
-    color: #f0f0f0; /* Light text in nav */
-    font-size: 16px;
+    padding: 12px 20px;
+    margin: 0 10px; /* Space between items */
+    border-radius: 8px; /* Rounded corners */
+    color: #f0f0f0; /* Light text color */
+    font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Navbar item hover effect */
 .nav-item:hover {
-    background-color: #444; /* Darker hover effect */
+    background-color: #444; /* Slightly lighter on hover */
 }
 
+/* Search bar style */
 .search-bar {
-    padding: 8px;
+    padding: 8px 15px;
     border-radius: 5px;
     border: 1px solid #666;
     background-color: #333;
     color: white;
+    margin-left: 20px; /* Space between navbar items and search bar */
+    font-size: 16px;
 }
+
+/* Mobile responsiveness: Stack navbar items on smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .nav-item {
+        margin: 5px 0; /* Adjust spacing between items on mobile */
+    }
+}
+
+
 
 /* Flexbox Layout for Columns */
 .flex-grid {
@@ -81,11 +111,34 @@ nav {
     align-items: flex-start;
 }
 
+/* Inner split of status section */
+.status-inner {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Left Section (Profile image and status options) */
+.status-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%; /* Slightly wider than before */
+}
+
+/* Right Section (Username, Status, Bio) */
+.status-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
 /* Profile image */
 .profile-img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 150px; /* Updated size */
+    height: 150px; /* Updated size */
 }
 
 /* Status options */
@@ -107,7 +160,7 @@ nav {
     background-color: #575757; /* Hover effect */
 }
 
-/* Custom Status */
+/* Custom Status Input */
 .custom-status {
     margin-top: 10px;
 }
@@ -122,29 +175,17 @@ nav {
     width: 70%;
 }
 
-.custom-status button {
-    margin-top: 5px;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.custom-status button:hover {
-    background-color: #0056b3;
-}
-
-.emoji {
-    font-size: 24px;
-    margin-left: 10px;
-}
-
 /* Current Status */
 .current-status {
     margin-top: 10px;
     font-weight: bold;
+}
+
+/* Bio Section */
+.bio {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #e0e0e0;
 }
 
 /* Friends Section */
@@ -182,5 +223,9 @@ nav {
 
     .col {
         margin: 10px 0;
+    }
+
+    .status-inner {
+        flex-direction: column;
     }
 }

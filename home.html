@@ -26,21 +26,28 @@
         <div class="col">
             <!-- Status Section -->
             <div class="section status-section">
-                <div class="status-header">
-                    <img src="placeholder.png" alt="Profile" class="profile-img"> <!-- Updated placeholder -->
-                    <div class="status-options">
-                        <div class="status-option" id="online" onclick="changeStatus('Online')">Online</div>
-                        <div class="status-option" id="away" onclick="changeStatus('Away')">Away</div>
-                        <div class="status-option" id="dnd" onclick="changeStatus('Do Not Disturb')">Do Not Disturb</div>
-                        <div class="status-option" id="custom" onclick="showCustomStatusInput()">Custom</div>
+                <div class="status-inner">
+                    <!-- Left Section (Profile Image and Status Options) -->
+                    <div class="status-left">
+                        <img src="placeholder.png" alt="Profile" class="profile-img">
+                        <div class="status-options">
+                            <div class="status-option" id="online" onclick="changeStatus('Online')">Online</div>
+                            <div class="status-option" id="away" onclick="changeStatus('Away')">Away</div>
+                            <div class="status-option" id="dnd" onclick="changeStatus('Do Not Disturb')">Do Not Disturb</div>
+                            <div class="status-option" id="custom" onclick="showCustomStatusInput()">Custom</div>
+                        </div>
+                        <div id="custom-status-input" class="custom-status" style="display: none;">
+                            <input type="text" id="custom-status" placeholder="Enter your custom status..." oninput="updateCustomStatus()">
+                        </div>
+                    </div>
+
+                    <!-- Right Section (Username, Status, Bio) -->
+                    <div class="status-right">
+                        <h3>Username</h3>
+                        <div id="current-status" class="current-status">Current Status: <span id="status-text">Offline</span></div>
+                        <div id="bio" class="bio">This is the user's bio.</div>
                     </div>
                 </div>
-                <div id="custom-status-input" class="custom-status" style="display: none;">
-                    <input type="text" id="custom-status" placeholder="Enter your custom status...">
-                    <button onclick="changeEmoji()">Change Emoji</button>
-                    <span id="emoji" class="emoji">🙂</span>
-                </div>
-                <div id="current-status" class="current-status">Current Status: <span id="status-text">Offline</span></div>
             </div>
 
             <!-- Friends Section -->
@@ -48,11 +55,11 @@
                 <h3>Friends</h3>
                 <!-- Example Friend List -->
                 <div class="friend-item">
-                    <img src="placeholder.png" alt="Friend" class="friend-img"> <!-- Updated placeholder -->
+                    <img src="placeholder.png" alt="Friend" class="friend-img">
                     <span class="friend-name">John Doe</span>
                 </div>
                 <div class="friend-item">
-                    <img src="placeholder.png" alt="Friend" class="friend-img"> <!-- Updated placeholder -->
+                    <img src="placeholder.png" alt="Friend" class="friend-img">
                     <span class="friend-name">Jane Smith</span>
                 </div>
             </div>
